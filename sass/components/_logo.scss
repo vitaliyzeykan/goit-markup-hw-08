@@ -1,0 +1,27 @@
+  .logo { 
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 1199px) {
+      justify-content: center;
+  
+    }
+  }
+
+  .logo__web,
+  .logo__studio {
+    font-family: 'Raleway';
+    font-style: normal;
+    @include fontparametrs(700, 26, 1.19, 0.03);
+  }
+
+  .logo__web {
+    color: var(--accent-color);
+  }
+
+  .logo__studio--black{
+    color: #000000;
+  }
+  
+  .logo__studio--white {
+    color: var(--main-color);
+}

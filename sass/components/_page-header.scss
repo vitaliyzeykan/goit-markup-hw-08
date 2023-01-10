@@ -1,0 +1,124 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+  padding: 0;
+  margin: 0;
+}
+
+.header-nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+}
+
+.site-nav {
+  margin-left: 87px;
+  display: flex;
+  align-items: center;
+  @include fontparametrs(500, 14, 1.14, 0.02);
+  @media screen and (min-width: 1200px) {
+    margin-left: 95px;
+  }
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  color: var(--secondary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &.current {
+    color: var(--accent-color);
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.site-nav__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+  &.current-page::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+.contacts { 
+  margin: 21px 0 21px 97px; 
+  
+  
+  @include fontparametrs(500, 12, 1.17, 0.02);
+  @media screen and (min-width: 1200px) {
+    margin-left: 315px;
+    display: flex;
+    align-items: center;
+    @include fontparametrs(500, 14, 1.14, 0.02);
+  }
+}
+
+.contacts__link {
+  color: var(--main-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+
+  }
+
+@media screen and (min-width: 1200px) {
+    .contacts__item:not(:last-child){
+    margin-right: 30px;
+    margin-bottom: 0px;}
+  }
+
+.contacts__icon {
+  margin-right: 8px;
+  fill: currentColor;
+  &:focus,
+  &:hover {
+    fill: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 10px;
+  }
+}

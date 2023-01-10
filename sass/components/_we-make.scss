@@ -1,0 +1,43 @@
+.nopadding {
+  padding-top: 0;
+}
+
+.section.nopadding {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.we-make__list {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.we-make__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.we-make__img-box {
+  position: relative;
+}
+
+.we-make__label {
+  position: absolute;
+  bottom: 0;
+  padding-top: 27px;
+  height: 70px;
+  width: 100%;
+  @include fontparametrs(700, 14, 1.14, 0.03);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.we {
+  @include fontparametrs(700, 36, 1.17, 0.03);
+  text-align: center;
+  margin-bottom: 50px;
+}

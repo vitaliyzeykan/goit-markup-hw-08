@@ -1,0 +1,23 @@
+.address {
+    padding-top: 20px;
+    @media screen and (max-width: 767px) {
+      text-align: center;}
+
+}
+
+.address__item {
+    @include fontparametrs(400, 14, 1.71, 0.03);
+    font-family: var(--main-font);
+    font-style: normal;
+    color: var(--main-color);
+    &:not(:last-child) {
+    padding-bottom: 9px;}
+    
+}
+
+.address__link {
+    @include fontparametrs(400, 14, 1.71, 0.03);
+    font-family: var(--main-font);
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+}

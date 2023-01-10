@@ -1,0 +1,66 @@
+.team {
+  background-color: var(--secondary-background-color);
+  
+}
+
+.team__header {
+  @include fontparametrs(700, 28, 1.17, 0.03);
+  text-align: center;
+  padding-bottom: 30px;
+  
+  @media screen and (min-width: 1200px) {
+  font-size: 36px;
+  padding-bottom: 50px;
+    
+  }
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  @media screen and (min-width: 768px) {
+    margin-left: -30px;
+  margin-bottom: -30px;
+  }
+}
+
+.team__cards {
+  background-color: var(--main-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+     }
+  }
+  
+  @media screen and (min-width: 768px) {
+        width: calc( (100% - 60px) / 2);
+        margin-left: 30px;
+        margin-bottom: 30px;
+     }
+     @media screen and (min-width: 1200px) {
+        width: calc( (100% - 120px) / 4);
+        margin-bottom: 0;
+     }
+}
+.card__descr {
+  padding-bottom: 30px;
+}
+
+.card__participant {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  @include fontparametrs(500, 16, 1.19, 0.03);
+  text-align: center;
+}
+
+.card__profession {
+  @include fontparametrs(400, 16, 1.19, 0.03);
+  text-align: center;
+  margin-bottom: 16px;
+}
