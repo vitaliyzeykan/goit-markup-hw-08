@@ -325,9 +325,18 @@ h3 {
 .mobile-menu {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
 }
 
 .mobile-nav {
+  margin-bottom: auto;
   text-decoration: none;
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -345,10 +354,6 @@ h3 {
 }
 .mobile-nav__link.current {
   color: var(--accent-color);
-}
-
-.mobile-contacts {
-  margin-top: 305px;
 }
 
 .mobile-contacts__tel-link {
@@ -666,6 +671,12 @@ h3 {
   .team__list {
     margin-left: -30px;
     margin-bottom: -30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__list {
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -1274,7 +1285,7 @@ h3 {
 @media screen and (min-width: 1200px) {
   .modal__title {
     line-height: 1.15;
-    width: 448px;
+    max-width: 448px;
   }
 }
 
@@ -1423,7 +1434,7 @@ h3 {
 }
 @media screen and (min-width: 1200px) {
   .form__comment {
-    width: 448px;
+    max-width: 448px;
     height: 120px;
   }
 }

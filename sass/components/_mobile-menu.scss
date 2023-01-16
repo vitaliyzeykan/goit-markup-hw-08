@@ -46,8 +46,12 @@
 .mobile-menu {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 .mobile-nav {
+  margin-bottom: auto;
   text-decoration: none;
   color: var(--secondary-text-color);
   @include fontparametrs(500, 40, 1.17, 0.02);
@@ -62,9 +66,7 @@
     color: var(--accent-color);
   }
 }
-.mobile-contacts {
-  margin-top: 305px;
-}
+
 .mobile-contacts__tel-link {
   @include fontparametrs(500, 34, 1.18, 0.02);
   color: var(--accent-color);
