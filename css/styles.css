@@ -866,3 +866,14 @@ p {
 .modal-close:focus {
   fill: var(--accent-color);
 }
+.hide {
+  opacity: 1;
+  animation-name: a1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes a1 {
+  to {
+    opacity: 0;
+  }
+}
